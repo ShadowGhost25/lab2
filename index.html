@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<script>
+let result = () => {
+var arr = document.forms['frm'].elements['one'].value
+var num = arr.split(' ').map(Number)
+var num2
+var num3
+for (key in num) {
+if (num[key] >= 0) {
+num2 = num[key]
+} else if (num[key] <= 0) {
+num3 = num[key]
+document.writeln(num3, ' ', num2)
+}
+}
+}
+</script>
+</head>
+
+<body>
+<form id="frm">
+<input type="text" id="one" />
+<button onclick="result()">Отправить</button>
+</form>
+</body>
+</html>
